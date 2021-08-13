@@ -20,7 +20,7 @@ def get_api(url, params):
             print (f"【商品名】：{product_info['productName'][:20]:<20s}", end="")
             print (f"【最高値】：{product_info['maxPrice']:>6}円", end="")
             print (f"【最安値】：{product_info['minPrice']:>6}円")
-        # print("-"*30)
+
         print(f"{'-'*30}\n【総　数】：{result['count']}件")
 
 def main():
