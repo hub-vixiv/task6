@@ -28,12 +28,17 @@ def main():
     # keyword)
     # url=f"https://app.rakuten.co.jp/services/api/IchibaItem/Search/20170706?applicationId={APP_ID}&format=json&keyword={keyword}"
     args = sys.argv
+    APP_ID = "1048230508650001298",
+    format = "json",
+    keyword = args[1]   #検索キーワード
+
+    url=f"https://app.rakuten.co.jp/services/api/IchibaItem/Search/20170706"
     params = dict(
-        applicationId = "1048230508650001298",
-        format = "json",
+        applicationId = APP_ID,
+        format = format,
         keyword = args[1]   #検索キーワード
     )
-    url=f"https://app.rakuten.co.jp/services/api/IchibaItem/Search/20170706"
+
     get_api(url, params=params)
 
 if __name__ == '__main__':
